@@ -2,7 +2,33 @@
 ## Running Potpie
 **Install Python 3.10**: Download and install Python 3.10 from the official Python website:
 https://www.python.org/downloads/release/python-3100/
-1. **Ensure Docker is Installed**: Verify that Docker is installed and running on your system.
+1. **Install and Configure Docker with Colima**:
+
+   a. Install Colima using Homebrew:
+   ```bash
+   brew install colima
+   ```
+
+   b. Start Colima with recommended resources:
+   ```bash
+   colima start --cpu 2 --memory 4 --disk 60
+   ```
+
+   c. Verify Docker installation:
+   ```bash
+   docker run --rm hello-world
+   ```
+
+   d. Managing Colima:
+   - Check status: `colima status`
+   - Stop Colima: `colima stop`
+   - Delete instance if needed: `colima delete`
+
+   If Docker stops working:
+   1. Stop Colima: `colima stop`
+   2. Delete the instance: `colima delete`
+   3. Start fresh: `colima start --cpu 2 --memory 4 --disk 60`
+
 2. **Set Up the Environment**: Create a `.env` file based on the provided `.env.template` in the repository. This file should include all necessary configuration settings for the application.
    Ensure that:
    ```
@@ -107,7 +133,33 @@ Follow these steps to set up the Secret Manager and Application Default Credenti
 Once completed, you are ready to proceed with the Potpie setup.
 ---
 ## Running Potpie
-1. **Ensure Docker is Installed**: Verify that Docker is installed and running on your system.
+1. **Install and Configure Docker with Colima**:
+
+   a. Install Colima using Homebrew:
+   ```bash
+   brew install colima
+   ```
+
+   b. Start Colima with recommended resources:
+   ```bash
+   colima start --cpu 2 --memory 4 --disk 60
+   ```
+
+   c. Verify Docker installation:
+   ```bash
+   docker run --rm hello-world
+   ```
+
+   d. Managing Colima:
+   - Check status: `colima status`
+   - Stop Colima: `colima stop`
+   - Delete instance if needed: `colima delete`
+
+   If Docker stops working:
+   1. Stop Colima: `colima stop`
+   2. Delete the instance: `colima delete`
+   3. Start fresh: `colima start --cpu 2 --memory 4 --disk 60`
+
 2. **Set Up the Environment**: Create a `.env` file based on the provided `.env.template` in the repository. This file should include all necessary configuration settings for the application.
 3. **Google Cloud Authentication**: Log in to your Google Cloud account and set up Application Default Credentials (ADC). Detailed instructions can be found in the documentation. Alternatively place the service account key file for your gcp project in service-account.json file in the root of the codebase.
 5. **Run Potpie**: Execute the following command:

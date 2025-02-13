@@ -84,12 +84,18 @@ class UserService:
 
     def setup_dummy_user(self):
         defaultUserId = os.getenv("defaultUsername")
-        user_service = UserService(self.db)
-        user = user_service.get_user_by_uid(defaultUserId)
-        if user:
-            print("Dummy user already exists")
-            return
-        else:
+        if not defaultUserId:
+            logging.error("defaultUsername not set in environment variables. This is required for development mode.")
+            return False
+
+        try:
+            # Check if user exists
+            existing_user = self.get_user_by_uid(defaultUserId)
+            if existing_user:
+                logging.info(f"Dummy user already exists with uid: {defaultUserId}")
+                return True
+
+            # Create new user
             user = CreateUser(
                 uid=defaultUserId,
                 email="defaultuser@potpie.ai",
@@ -97,13 +103,21 @@ class UserService:
                 email_verified=True,
                 created_at=datetime.utcnow(),
                 last_login_at=datetime.utcnow(),
-                provider_info={},
-                provider_username="self",
+                provider_info={"provider": "development"},
+                provider_username="defaultuser",
             )
-            uid, message, error = user_service.create_user(user)
+            uid, message, error = self.create_user(user)
+            
+            if error:
+                logging.error(f"Error creating dummy user: {message}")
+                return False
+            
+            logging.info(f"Successfully created dummy user with uid: {uid}")
+            return True
 
-        uid, _, _ = user_service.create_user(user)
-        logging.info(f"Created dummy user with uid: {uid}")
+        except Exception as e:
+            logging.error(f"Unexpected error creating dummy user: {str(e)}")
+            return False
 
     def get_user_by_uid(self, uid: str):
         try:

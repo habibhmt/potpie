@@ -147,7 +147,9 @@ class MainApp:
             db.close()
 
     def run(self):
-        self.add_health_check()
+        @self.app.get("/health")
+        async def health_check():
+            return {"status": "ok"}
         self.app.add_event_handler("startup", self.startup_event)
         return self.app
 
