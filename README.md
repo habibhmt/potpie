@@ -1,31 +1,25 @@
 <p align="center">
-  <a href="https://potpie.ai?utm_source=github">
-    <img src="https://github.com/user-attachments/assets/1a0b9824-833b-4c0a-b56d-ede5623295ca" width="318px" alt="Momentum logo" />
+  <a href="https://github.com/habibhmt/potpie">
+    <img src="https://github.com/user-attachments/assets/1a0b9824-833b-4c0a-b56d-ede5623295ca" width="318px" alt="Potpie logo" />
   </a>
 </p>
 
 <br/>
 <p align="center">
-<a href="https://trendshift.io/repositories/12918" target="_blank"><img src="https://trendshift.io/api/badge/repositories/12918" alt="potpie-ai%2Fpotpie | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-</br>
   <br />
-  <a href="https://app.potpie.ai" rel="dofollow">App</a> | <a href="https://docs.potpie.ai" rel="dofollow">Documentation</a> | <a href="https://docs.potpie.ai/open-source"  rel="dofollow">API Reference</a> | <a href="https://app.potpie.ai/newchat?repo=potpie-ai/potpie&branch=main" rel="dofollow">Chat with 🥧 Repo</a>
+  <a href="https://github.com/habibhmt/potpie">Homepage</a> | <a href="https://github.com/habibhmt/potpie/blob/main/README.md">Documentation</a>
   <br />
-
-  </p>
+</p>
 
 <p align="center">
-
-  <a href="https://github.com/potpie-ai/potpie/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/potpie-ai/potpie" alt="Apache 2.0">
+  <a href="https://github.com/habibhmt/potpie/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/habibhmt/potpie" alt="Apache 2.0">
   </a>
 
-  <a href="https://github.com/potpie-ai/potpie">
-    <img src="https://img.shields.io/github/stars/potpie-ai/potpie" alt="GitHub Repo stars">
+  <a href="https://github.com/habibhmt/potpie">
+    <img src="https://img.shields.io/github/stars/habibhmt/potpie" alt="GitHub Repo stars">
   </a>
-  
-</br>
-
+</p>
 
 <a href="https://discord.gg/ryk5CMD5v6">
     <img src="https://img.shields.io/badge/Join%20our-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Join our Discord">
